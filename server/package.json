@@ -1,0 +1,15 @@
+{
+  "name": "image-check-server",
+  "version": "0.0.0",
+  "description": "image check server",
+  "main": "index.js",
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "author": "xudanhust",
+  "license": "ISC"
+}
