@@ -23,9 +23,10 @@ http.createServer(function(req, res) {
 });
 
 function download(url, callback) {
-    http.get(url, function(res) {
+    var req = http.get(url, function(res) {
         callback(res);
+        req.abort();
     }).on("error", function() {
         callback(null);
-    });
+    }).on('end', function(){});
 }

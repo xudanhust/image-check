@@ -4,15 +4,97 @@
     <meta charset="UTF-8">
     <title>images</title>
     <style>
-    .oversize{
-        border: 10px solid red;
+    .img-wrap li{
+        float: left;
+        width: 220px;
+        height: 220px;
+        margin: 20px;
+        list-style-type: none;
+    }
+    .img-wrap li img{
+        width: 200px;
+        height: 150px;
+        border: 10px solid white;
+    }
+    .img-wrap li .tip{
+        font-size: 12px;
+        line-height: 20px;
+        height: 20px;
+        overflow: hidden;
+        padding: 0 20px;
+    }
+    .img-wrap li .suggestion{
+        display: none;
+    }
+    .img-wrap li img.ok{
+        border-color: green;
+    }
+    .img-wrap li img.oversize-1{
+        border-color: yellow;
+    }
+    .img-wrap li img.oversize-2{
+        border-color: red;
     }
     </style>
 </head>
 <body>
-    <img src="http://c2.staticflickr.com/6/5578/15196426112_f3b25c0763_n.jpg" alt="" />
-    <img src="http://i01.c.aliimg.com/cms/upload/2014/107/050/2050701_1280958881.jpg" alt="" />
-    <img src="http://i01.c.aliimg.com/cms/upload/2014/007/050/2050700_1280958881.jpg" alt="" />
+    <h1>图片大小检测</h1>
+    <ul class="img-wrap">
+        <li>
+            <img src="http://c2.staticflickr.com/6/5578/15196426112_f3b25c0763_n.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i01.c.aliimg.com/cms/upload/2014/107/050/2050701_1280958881.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i01.c.aliimg.com/cms/upload/2014/007/050/2050700_1280958881.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i04.c.aliimg.com/cms/upload/2014/599/150/2051995_1140960970.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i04.c.aliimg.com/cms/upload/2014/773/150/2051377_1140960970.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i02.c.aliimg.com/cms/upload/2014/573/150/2051375_1140960970.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i03.c.aliimg.com/cms/upload/2014/316/498/1894613_431819577.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i02.c.aliimg.com/cms/upload/2014/098/839/1938890_1280958881.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+        <li>
+            <img src="http://i02.c.aliimg.com/img/ibank/2014/087/648/1389846780_1328921477.180x180.jpg" alt="" />
+            <div class="tip">原图尺寸：<span class="resolution"></span></div>
+            <div class="tip">文件大小：<span class="size"></span></div>
+            <div class="tip suggestion">建议文件大小不超过：<span class="sug-size"></span></div>
+        </li>
+    </ul>
     <script src="lib/jquery-latest.js"></script>
     <script src="image-check.js"></script>
 </body>
