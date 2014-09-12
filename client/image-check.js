@@ -3,6 +3,7 @@
 (function($){
 
     var url = 'http://localhost:8888';
+    var SIZE_COEFFICIENT = 2000;
 
     var imageCheck = function(){
         var images = $('img');
@@ -20,13 +21,15 @@
                 })
                 .done(function(o) {
                     if(o.fileSize){
-                        var oversize = (o.fileSize / 1024) / (testImg.width * testImg.height / 2250),
+                        var oversize = o.fileSize / 1024 / (testImg.width * testImg.height / SIZE_COEFFICIENT),
                             thisImg = $('img[src="'+ o.url +'"]');
 
                         thisImg.closest('li').find('.resolution').text(testImg.width + 'x' + testImg.height);
                         thisImg.closest('li').find('.size').text(getSize(o.fileSize));
 
-                        if(oversize > 2){
+                        if(oversize > 3){
+                            thisImg.addClass('oversize-3');
+                        }else if(oversize > 2){
                             thisImg.addClass('oversize-2');
                         }else if(oversize > 1){
                             thisImg.addClass('oversize-1');
@@ -35,7 +38,7 @@
                         }
 
                         if(oversize > 1){
-                            thisImg.closest('li').find('.suggestion').show().find('.sug-size').text((testImg.width * testImg.height / 2250).toFixed(2) + 'KB');
+                            thisImg.closest('li').find('.suggestion').show().find('.sug-size').text(getSize(testImg.width * testImg.height * 1024 / SIZE_COEFFICIENT));
                         }
                     }
                 })

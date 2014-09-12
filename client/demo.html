@@ -14,7 +14,7 @@
     .img-wrap li img{
         width: 200px;
         height: 150px;
-        border: 10px solid white;
+        border: 10px solid transparent;
     }
     .img-wrap li .tip{
         font-size: 12px;
@@ -33,7 +33,20 @@
         border-color: yellow;
     }
     .img-wrap li img.oversize-2{
-        border-color: red;
+        -webkit-animation: blinkRed 2s infinite;
+    }
+    .img-wrap li img.oversize-3{
+        -webkit-animation: blinkPurple 1.5s infinite;
+    }
+    @-webkit-keyframes blinkRed{
+        0% { border-color: transparent; }
+        50% { border-color: red; }
+        100% { border-color: transparent; }
+    }
+    @-webkit-keyframes blinkPurple{
+        0% { border-color: transparent; }
+        50% { border-color: purple; }
+        100% { border-color: transparent; }
     }
     </style>
 </head>
